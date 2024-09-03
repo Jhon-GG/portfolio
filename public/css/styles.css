@@ -52,7 +52,7 @@ body {
 }
 
 .nav-burger.active img {
-    transform: translateX(-380%);
+    transform: translateX(-400%);
 }
 
 .menu {
@@ -61,9 +61,11 @@ body {
     right: -100%;
     width: 300px;
     height: 100%;
-    background-color: #1c1c1c;
+    background: linear-gradient(to bottom, #000, #171E2B);
+    /* background-color: #1c1c1c; */
     transition: right 0.3s ease-in-out;
     overflow-y: auto;
+    border: 1px solid #ffffff07; 
 }
 
 .menu.active {
@@ -75,8 +77,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #2c2c2c;
-    color: #255ed8;
+    background-color: #ffffff;
+    color: #3761b9;
 }
 
 .menu-header span {
@@ -110,14 +112,65 @@ body {
 
 .main{
     display: flex;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 100vw;
-    height: 88vh;
+    height: 89vh;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom, #000, #171E2B);
     /* background: #171E2B; */
 }
 
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    opacity: 100%;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
 
+.box-1 img {
+    width: 20%;
+    height: 50%;
+    border-radius: 10px;
+}
 
+.box-1 p {
+    font-size: 120%;
+}
+
+.box-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-size: 20px 20px;
+    animation: movimientoAleatorio 10s infinite linear;
+}
+
+@keyframes movimientoAleatorio {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100vw - 20px), calc(100vh - 20px));
+    }
+}
+
+.luz {
+    position: absolute;
+    width: 10px; /* Tamaño de los cuadrados */
+    height: 10px; /* Tamaño de los cuadrados */
+    border: 1px solid rgba(255, 255, 255, 0.151);
+    /* Eliminamos border-radius para mantener las figuras como cuadrados */
+    animation: movimientoAleatorio 15s infinite alternate;
+}
