@@ -30,6 +30,8 @@ body {
     justify-content: center;
     align-items: center; 
     margin-top: 0.5%;
+    position: fixed;
+    /* z-index: 10; */
 }
 
 .nav-box {
@@ -52,6 +54,7 @@ body {
 .nav-logo img {
     width: 100%;
     height: 100%;
+    border-radius: 10%;
 }
 
 .nav-burger {
@@ -144,8 +147,9 @@ body {
     display: flex;
     flex-direction: column;
     /* border: 1px solid blue; */
+    margin-top: 10%;
     width: 90vw;
-    height: 100%;
+    height:100vh;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -181,7 +185,7 @@ body {
 
 .section-title{
     display: flex;
-    margin-top: 1%;
+    margin-top: 5%;
     /* border: 1px solid blue; */
     width: 90vw;
     height: 12vh;
@@ -239,6 +243,7 @@ body {
 
 .objetivos-title{
     display: flex;
+    margin-top: 5%;
     /* border: 1px solid red; */
     width: 90vw;
     height: 12vh;
@@ -629,6 +634,7 @@ body {
 
 .proyectos-title{
     display: flex;
+    margin-top: 5%;
     /* border: 1px solid blue; */
     width: 90vw;
     height: 12vh;
@@ -687,10 +693,83 @@ body {
 }
 
 
+.contacto{
+    display: flex;
+    /* border: 1px solid green; */
+    width: 100vw;
+    height: 40vh;
+    background: linear-gradient(to bottom, #171E2B, #000);
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-base{
+    display: flex;
+    /* border: 1px solid blue; */
+    width: 90vw;
+    height: 100%;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    gap: 5%;
+}
+
+.contactame{
+    display: flex;
+    /* border: 1px solid yellow; */
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+.contacto-boxes{
+    display: flex;
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
 
 
+.contacto-boxes a {
+    /* border: 1px solid yellow; */
+    width: 3.5vw;
+    height:8vh;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 6%;
+}
 
+.contacto-boxes a:hover{
+    transform: scale(1.1);
+}
 
+.contacto-boxes img{
+    width: 100%;
+    height: 100%;
+}
+
+.rights{
+    display: flex;
+    /* border: 1px solid green; */
+    width: 100vw;
+    height: auto;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.rights h1{
+    font-weight: normal;
+    font-size: 100%;
+}
 
 /* -------------------------------INICIO DE LA PÁGINA------------------------------------- */
 
@@ -775,39 +854,6 @@ body {
     animation-delay: 1.5s;
 }
 
-
-
-
-
-/* ------------------------------Back To Top Button ------------------------------------ */
-.back-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #7f83b8;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1; /* Cambiado de 0 a 1 para que sea visible inicialmente */
-    transition: background-color 0.3s;
-    z-index: 9999; 
-  }
-  
-  .back-to-top-btn:hover {
-    background-color: #a08a6e;
-  }
-  
-  .back-to-top-btn svg {
-    width: 24px;
-    height: 24px;
-  }
 
 
 /* ------------------------------------------------- Estilos para la barra de scroll con tema oscuro --------------------------- */
