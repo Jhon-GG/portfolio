@@ -153,9 +153,9 @@ body {
 }
 
 .box-1 img {
-    width: 27%;
+    width: 30%;
     height: 50%;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 3%;
 }
 
@@ -613,6 +613,79 @@ body {
 .habilidades-boxes2 p{
     font-size: 130%;
 }
+
+
+
+.proyectos{
+    display: flex;
+    flex-direction: column; 
+    /* border: 1px solid yellow; */
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000, #171E2B);
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.proyectos-title{
+    display: flex;
+    /* border: 1px solid blue; */
+    width: 90vw;
+    height: 12vh;
+    /* margin: 8%; */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 200%;
+}
+
+.proyectos-base{
+    display: flex;
+    /* border: 1px solid green; */
+    width: 90vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.proyecto-boxes{
+    display:flex;
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    flex-direction: column;
+    width: 25vw;
+    height: 60vh;
+    border-radius: 8%;
+    color: #fff;
+    align-items: center;
+    text-decoration: none;
+}
+
+.proyecto-boxes:hover{
+    background: #ffffff1e;
+    cursor: pointer;
+}
+
+.proyecto-boxes h1{
+    font-size: 180%;
+    margin-top: 8%;
+}
+
+.proyecto-boxes img{
+    width: 30%;
+    height: 20%;
+    margin-top: 8%;
+}
+
+.proyecto-boxes p{
+    /* border: 1px solid red; */
+    width: 20vw;
+    height: 20vh;
+    text-align: justify;
+    margin-top: 10%;
+    font-size: 120%;
+}
+
 
 
 
