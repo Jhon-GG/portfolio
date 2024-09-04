@@ -43,76 +43,46 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
 
-        const circles = [];
-
-        function Circle(x, y, radius, dx, dy) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.dx = dx;
-            this.dy = dy;
-            this.alpha = 0;
-            this.color = `rgba(0, 100, 255, ${this.alpha})`;
-        }
-
-        Circle.prototype.draw = function() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-            ctx.strokeStyle = this.color;
-            ctx.stroke();
-        }
-
-        Circle.prototype.update = function() {
-            if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
-                this.dx = -this.dx;
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Usando scrollTo con fallback para navegadores más antiguos
+            if ('scrollBehavior' in document.documentElement.style) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Fallback para navegadores que no soportan scrollBehavior
+                smoothScrollToTop();
             }
-            if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
-                this.dy = -this.dy;
-            }
-
-            this.x += this.dx;
-            this.y += this.dy;
-
-            if (this.alpha < 1) {
-                this.alpha += 0.005;
-                this.color = `rgba(0, 100, 255, ${this.alpha})`;
-            }
-
-            this.draw();
-        }
-
-        function init() {
-            for (let i = 0; i < 15; i++) {
-                let radius = Math.random() * 50 + 10;
-                let x = Math.random() * (canvas.width - radius * 2) + radius;
-                let y = Math.random() * (canvas.height - radius * 2) + radius;
-                let dx = (Math.random() - 0.5) * 2;
-                let dy = (Math.random() - 0.5) * 2;
-
-                circles.push(new Circle(x, y, radius, dx, dy));
-            }
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            for (let circle of circles) {
-                circle.update();
-            }
-        }
-
-        init();
-        animate();
-
-        window.addEventListener('resize', function() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            init();
         });
+    } else {
+        console.error('Back to top button not found');
+    }
+});
+
+// Función de fallback para scroll suave
+function smoothScrollToTop() {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+        window.requestAnimationFrame(smoothScrollToTop);
+        window.scrollTo(0, c - c / 8);
+    }
+}
+
+// Opcional: Mostrar/ocultar el botón basado en la posición de scroll
+window.addEventListener('scroll', function() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+        if (window.pageYOffset > 100) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    }
+});
