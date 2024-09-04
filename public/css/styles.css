@@ -380,6 +380,135 @@ body {
     font-size: 180%;
 }
 
+
+.certif{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;    
+    background: linear-gradient(to bottom, #000, #171E2B);
+}
+
+.certif-title{
+    display: flex;
+    /* border: 1px solid yellow; */
+    margin-top: 1.2%;
+    width: 90vw;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.certif-title h1{
+    font-size: 300%;
+}
+
+.certif-box{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    width: 90vw;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.certif-1{
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 0%;
+    width: 90vw;
+    height: 40vh;
+    justify-content: space-evenly;
+}
+
+.a-box1{
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 2%;
+    width: 20vw;
+    height: 100%;
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff9d;
+}
+
+.a-box1:hover{
+    background-image: url("/public/storage/img/js.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.a-box1_1{
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    width: 20vw;
+    height: 100%;
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    padding: 2%;
+    align-items: center;
+    color: #ffffff9d;
+}
+
+.a-box1_1:hover{
+    background-image: url("/public/storage/img/web.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.certif-2{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 90vw;
+    height: 40vh;
+    justify-content: center;
+    gap: 9%;
+}
+
+.a-box2{
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    width: 20vw;
+    height: 100%;
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    color: #ffffff9d;
+}
+
+.a-box2:hover{
+    background-image: url("/public/storage/img/git.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -------------------------------INICIO DE LA PÁGINA------------------------------------- */
 
 
