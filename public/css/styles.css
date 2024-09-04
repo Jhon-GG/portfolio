@@ -313,8 +313,9 @@ body {
 .mision{
     display: flex;
     /* border: 1px solid yellow; */
+    margin-top: 5%;
     padding: 2%;
-    height: 20vh;
+    height: 25vh;
     align-items: center;
     color: #fff;
     justify-content: space-evenly;
@@ -332,13 +333,13 @@ body {
 .mision p{
     width: 80%;
     margin-left: 5%;
-    font-size: 180%;
+    font-size: 120%;
 }
 
 .vision{
     display: flex;
     /* border: 1px solid red; */
-    height: 20vh;
+    height: 25vh;
     padding: 2%;
     align-items: center;
     color: #fff;
@@ -357,13 +358,13 @@ body {
 .vision p{
     width: 80%;
     margin-right: 5%;
-    font-size: 180%;
+    font-size: 120%;
 }
 
 .valores{
     display: flex;
     /* border: 1px solid yellow; */
-    height: 20vh;
+    height: 25vh;
     padding: 2%;
     align-items: center;
     color: #fff;
@@ -382,7 +383,7 @@ body {
 .valores p{
     width: 80%;
     margin-left: 5%;
-    font-size: 180%;
+    font-size: 120%;
 }
 
 
@@ -638,11 +639,15 @@ body {
     /* border: 1px solid blue; */
     width: 90vw;
     height: 12vh;
-    /* margin: 8%; */
+    margin: 8%;
     justify-content: center;
     align-items: center;
     color: #fff;
     font-size: 200%;
+}
+
+.proyectos-title h1{
+    color: #fff;
 }
 
 .proyectos-base{
